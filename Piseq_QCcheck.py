@@ -17,6 +17,7 @@ for target in filelist:
     temp.index = [index]
     qcres = qcres.append(temp)
 
+qcres['Average depth'] = qcres['Average depth'].apply(lambda x: str(x).replace("x",""))
 qcres = qcres[['Total bases (bam)',
        'Average depth', 
        'On target', 
